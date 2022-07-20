@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("partials/head") -%> 
+
+<body>
+    <div class="container">
+
+        <%- include("partials/header") -%> 
+
+        <img id="fondo" src="/images/Banner.jpg" alt="">
+        <a href="#" class="a_boton"><button class="boton">Reserva ya!</button></a>
+
+
+        <!-- Section Menu  -->
+
+        <h2 class="header_menu" id="menu">Menú</h2>
+        <%- include("partials/menu") -%> 
+        
+
+        <!-- Section Acerca de Nosotros -->
+
+        <section class="acercaDeNosotros" id="nosotros">
+            <div>
+                <ul>
+                    <li>
+                        <h2>ACERCA DE NOSOTROS</h2>
+                    </li>
+                    <li>
+                        <p>Somos una pizzeria especializada en ofrecerle la mayor calidad que pudo haber probado. Esperamos su llamado.  </p>
+                    </li>
+                </ul>
+                <img src="/images/about_us.png" alt="">
+            </div>
+        </section>
+
+        <!-- Seccion Reserva tu Mesa -->
+
+        <h2 class="header_reservaTuMesa" id="reservaTuMesa">Reservá tu Mesa</h2>
+        <section class="reservaTuMesa">
+            <form action="">
+                <div>
+                    <input type="text" name="nombre" placeholder="Nombre">
+                    <input type="email" name="email" placeholder="Correo Electrónico">
+                </div>
+                <div>
+                    <input type="date" name="fecha" placeholder="Fecha">
+                    <input type="datetime" name="hora" placeholder="Hora">
+                </div>
+                <div>
+                    <input type="number" name="email" placeholder="Personas">
+                    <button type="submit">Reservar</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Footer -->
+
+        <%- include("partials/footer") -%> 
+    </div>
+    <script src="/js/header.js"></script>
+</body>
+
+</html>

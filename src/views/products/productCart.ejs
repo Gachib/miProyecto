@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("../partials/head")  %> 
+<body>
+    <div class="container">
+
+        <%- include("../partials/header") -%> 
+
+        <div class="cuerpoCarrito">
+            <h1>Carrito de Compras</h1>
+            <div class="infoDeProductosCarrito">
+                <img src="/images/products/<%= product.productImages[0].imageName  %> " alt="">
+                <div class="nombrePrecioProducto">
+                    <p><%= product.name %> </p>
+                    <p>Precio: $<%= product.price %> </p>
+                </div>
+                <p>Cantidad: <input type="number" name="" id=""></p>
+                <p class="noVisibleAndroid">Sub Total: $12341</p>
+            </div>
+            <div class="infoDePedido">
+                <div><p>SUB TOTAL: </p><p>$1234</p></div>
+                <div><p>ENVIO: </p><p>$1400</p></div>
+                <div><p>TOTAL: </p><p>$12341</p></div>
+                <!--<p class="noVisibleAndroid">Comentarios<input type="text" name="" id=""></p>-->
+            </div>
+        </div>
+        <div class="botonPedido">
+            <button>Relizar Pedido</button>
+        </div>
+
+        <!--
+        <div class="nav"><h2>Nav</h2></div>
+        <div class="contenido">
+            <div class="producto">
+                <ul class="titulos">
+                    <li><p></p></li>
+                    <li><p>producto</p></li>
+                    <li><p>unidad</p></li>
+                    <li><p>cantidad</p></li>
+                    <li><p>Subtotal</p></li>
+                </ul>
+                <ul>
+                    <li><div class="imagen"><img class="1imagen" src="images/pizza margarita.jpg" alt=""></div></li>
+                    <li><p>Margarita</p></li>
+                    <li><p>$ 1000</p></li>
+                    <li><input type="number" class="A"></li>
+                    <li><p>$ 1000</p></li>
+                </ul>
+                <ul>
+                    <li><div class="imagen"><img class="1imagen" src="images/pizza margarita.jpg" alt=""></div></li>
+                    <li><p>Fugazza</p></li>
+                    <li><p>$ 1450</p></li>
+                    <li><input type="number" class="A"></li>
+                    <li><p>$ 1450</p></li>
+                </ul>
+                <ul>
+                    <li><div class="imagen"><img class="1imagen" src="images/pizza margarita.jpg" alt=""></div></li>
+                    <li><p>producto</p></li>
+                    <li><p>$ 1500</p></li>
+                    <li><input type="number" class="A"></li>
+                    <li><p>$ 1500</p></li>
+                </ul>
+                <ul>
+                    <li><div class="imagen"><img class="1imagen" src="images/pizza margarita.jpg" alt=""></div></li>
+                    <li><p>Calabreza</p></li>
+                    <li><p>$ 1800</p></li>
+                    <li><input type="number" class="A"></li>
+                    <li><p>4 1800</p></li>
+                </ul>
+                <ul>
+                    <li><div class="imagen"><img class="1imagen" src="images/pizza margarita.jpg" alt=""></div></li>
+                    <li><p>Calabreza</p></li>
+                    <li><p>$ 2300</p></li>
+                    <li><input type="number" class="A"></li>
+                    <li><p>$ 2300</p></li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="footer">
+            <div class="Total"><h2 class="total">Total</div>
+            <div class="montototal"><h2>$ 2333</h2></div>
+            <div class="botonpagar" ><button class="pagar">Pagar</button></div>
+        </div>
+        -->
+        <%- include("../partials/footer")  %> 
+    </div>
+    <script src="/js/header.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,128 @@
+
+body form  {
+    font-family: 'Montserrat', sans-serif;
+    display:flex;
+    justify-content: center;
+    /*align-items: center;*/
+    /*min-height: 100vh;*/
+    flex-direction: column;
+    /*padding: 0 1rem; */
+    
+}
+
+body form h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+    width: 80%;
+}
+
+body form hr {
+    color: black;
+    height: 2px;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+main.forms-container {
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+main form { 
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    border-radius: 10px;
+    border: solid 2px var(--naranja-Fuerte);
+    width: 90%;
+    max-width: 500px;
+    
+}
+
+div.container main.forms-container h2{
+    margin-bottom: 20px;
+}
+
+body form .input-container{
+    margin-top: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+body form div.input_check-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    gap: 7px;
+}
+
+.checkbox-input{
+    width: 15px;
+
+}
+
+body div.container main.forms-container form.form-register div.input_check-container nav{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+body div.container main.forms-container form.form-register div.input-container input#avatar.input-style{
+    padding-bottom: 30px;
+}
+
+body form span.error-message{
+    color: red;
+    text-align: center;
+    
+}
+
+body form input.input-style{
+    border: solid 2px #e85f0c;
+    border-radius: 20px;
+    width: 250px;
+    height: 2rem;
+    padding: 0.5rem;
+    outline: none;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.btn-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn{
+    background-color: #e85f0c;
+    border: none;
+    border-radius: 20px;
+    width: 250px;
+    padding: 0.5rem;
+    margin: 0.2rem;
+    color: white;
+    cursor: pointer;
+    
+}
+
+@media (min-width: 768px){
+    
+main.forms-container {
+    margin-top: 150px;
+}
+}

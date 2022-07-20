@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head")  %> 
+<body>
+  <%- include('../partials/header') %> 
+  
+    <div class="addProduct">
+        <legend>AGREGAR PRODUCTO</legend>
+        <form action="/admin/productos" method="POST" id="form" enctype="multipart/form-data">
+            <div>
+              <label for="name">Nombre del producto</label>
+              <input type="text" name="name" id="name" placeholder="Ej: Pizza Muzzarella" value="<%= (locals.old && old.name) ? old.name : "" %>">
+              <% if (locals.errors && errors.name) { %>
+                <small id="errorBackName"><%= errors.name.msg%></small>
+              <% } %>
+              <small id="errorName" style="color: red;"></small>
+            </div>
+            
+            <div>
+              <label for="price">Precio del producto</label>
+              <input type="number" name="price" id="price" placeholder="Ej: 1000" value="<%= (locals.old && old.price) ? old.price : "" %>">
+              <% if (locals.errors && errors.price) { %>
+                <small id="errorBackPrice"><%= errors.price.msg%></small>
+              <% } %>
+              <small id="errorPrice" style="color: red;"></small>
+            </div>
+            <div>
+              <label for="category">Categorias</label>
+              <select id="id_categoria" name="categoryId">
+                <option selected hidden value="">Categoría</option>
+                <% categorias.forEach(categoria => { %>
+                  <option value="<%=categoria.id%>" <%= (locals.old && old.categoryId) && old.categoryId == categoria.id ? "selected" : "" %>><%=categoria.name%></option>
+                <% }) %>
+              </select>
+              <% if (locals.errors && errors.categoryId) { %>
+                <small id="errorBackIdCategoria"><%= errors.categoryId.msg%></small>
+              <% } %>
+              <small id="errorId_categoria" style="color: red;"></small>            
+            </div>
+            <div>
+              <label for="inputFile">Imagen</label>
+              <input type="file" id="inputFile" name="image"/>
+              <small id="errorImage" style="color: red;"></small>
+            </div>
+            <div id="stock">
+              <input name="stock" type="checkbox" role="switch" id="stock" <%= (locals.old && old.stock) ? "checked" : "" %>>
+              <label for="stock">Stock disponible</label>
+              <small id="errorStock" style="color: red;"></small>
+            </div>
+            <div>
+              <label for="description">Descripción</label>
+              <textarea name="description" id="description" rows="4"><%= (locals.old && old.description) ? old.description : "" %></textarea>
+              <small id="errorDescription" style="color: red;"></small>
+            </div>
+            <div>
+              <small id="errorSubmit" style="color: red"></small>
+            </div>
+            <div>
+              <button type="submit">Crear</button>
+            </div>
+        </form>
+    </div>
+    
+  <%- include('../partials/footer')  %>
+  <script src="/js/Admin/addProductValidator.js"></script>
+</body>
+</html>

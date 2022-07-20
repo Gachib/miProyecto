@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include("partials/head") -%> 
+
+<body>
+<div class="container">
+
+    <%- include("partials/header") -%> 
+
+
+
+    <!-- Seccion Detalle de Producto -->
+    <h1 id="resultados">Resultado de la busqueda: <%- busqueda  %> </h1>
+    <section class="menu">
+        <% if (productos.length > 0)  { %>
+            <%- include("partials/menu") -%> 
+        <% } else { %>
+            <h2>No se encontro ningun resultado</h2>
+            <% } %>
+    </section>
+
+    <!-- Section Menu -->
+
+    <!--<h2 class="header_masProductos">Ver mas productos</h2>-->
+
+   
+
+    <%- include("partials/footer") -%> 
+</div>
+    <script src="/js/header.js"></script>
+    <script src="/js/search.js"></script>
+</body>
+
+</html>

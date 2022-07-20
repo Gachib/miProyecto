@@ -1,0 +1,16 @@
+<section class="menu">
+    <% productos.forEach(producto => { %>
+        <article class="product">
+            <a href="/productos/detalle/<%= producto.id  %> "><img src="/images/products/<%= producto.productImages[0].imageName %>"  alt=""></a>
+            <h3><%= producto.name %></h3>
+            <p><%= producto.description %></p>
+            <div>
+                <p><%= producto.price %></p>
+                <nav>
+                    <input type="number">
+                </nav>
+            </div>
+            <button>Añadir al carrito</button>
+        </article>
+    <% }) %> 
+</section>
